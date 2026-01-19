@@ -1,0 +1,206 @@
+﻿Key,English
+
+zombieArlene,Arlene
+zombieArleneCharged,Charged Arlene
+zombieArleneFeral,Feral Arlene
+zombieArleneInfernal,Infernal Arlene
+zombieArleneRadiated,Radiated Arlene
+
+zombieBehemoth,Behemoth
+
+zombieBiker,Biker
+zombieBikerCharged,Charged Biker
+zombieBikerFeral,Feral Biker
+zombieBikerInfernal,Infernal Biker
+zombieBikerRadiated,Radiated Biker
+
+zombieBoe,The Rock
+zombieBoeCharged,Charged The Rock
+zombieBoeFeral,Feral The Rock
+zombieBoeInfernal,Infernal The Rock
+zombieBoeRadiated,Radiated The Rock
+
+zombieBowler,Bowler Tubby
+zombieBowlerCharged,Charged Bowler Tubby
+zombieBowlerFeral,Feral Bowler Tubby
+zombieBowlerInfernal,Infernal Bowler Tubby
+zombieBowlerRadiated,Radiated Bowler Tubby
+
+zombieBurnt,Crispy
+zombieBurntCharged,Charged Crispy
+zombieBurntFeral,Feral Crispy
+zombieBurntInfernal,Infernal Crispy
+zombieBurntRadiated,Radiated Crispy
+
+zombieBusinessMan,Business-Steve
+zombieBusinessManCharged,Charged Business-Steve
+zombieBusinessManFeral,Feral Business-Steve
+zombieBusinessManInfernal,Infernal Business-Steve
+zombieBusinessManRadiated,Radiated Business-Steve
+
+zombieChuck,Chuck
+zombieChuckCharged,Charged Chuck
+zombieChuckFeral,Feral Chuck
+zombieChuckInfernal,Infernal Chuck
+zombieChuckRadiated,Radiated Chuck
+
+zombieDarlene,Darlene
+zombieDarleneCharged,Charged Darlene
+zombieDarleneFeral,Feral Darlene
+zombieDarleneInfernal,Infernal Darlene
+zombieDarleneRadiated,Radiated Darlene
+
+zombieDemolition,Demolition
+
+zombieFatCop,Cop
+zombieFatCopCharged,Charged Cop
+zombieFatCopFeral,Feral Cop
+zombieFatCopInfernal,Infernal Cop
+zombieFatCopRadiated,Radiated Cop
+
+zombieFatHawaiian,Tourist
+zombieFatHawaiianCharged,Charged Tourist
+zombieFatHawaiianFeral,Feral Tourist
+zombieFatHawaiianInfernal,Infernal Tourist
+zombieFatHawaiianRadiated,Radiated Tourist
+
+zombieFemaleFat,Martha
+zombieFemaleFatCharged,Charged Martha
+zombieFemaleFatFeral,Feral Martha
+zombieFemaleFatInfernal,Infernal Martha
+zombieFemaleFatRadiated,Radiated Martha
+
+zombieFrostclaw,Chuck
+zombieFrostclawCharged,Charged Chuck
+zombieFrostclawFeral,Feral Chuck
+zombieFrostclawInfernal,Infernal Chuck
+zombieFrostclawRadiated,Radiated Chuck
+
+zombieInmate,Inmate
+zombieInmateCharged,Charged Inmate
+zombieInmateFeral,Feral Inmate
+zombieInmateInfernal,Infernal Inmate
+zombieInmateRadiated,Radiated Inmate
+
+zombieJanitor,Janitor
+zombieJanitorCharged,Charged Janitor
+zombieJanitorFeral,Feral Janitor
+zombieJanitorInfernal,Infernal Janitor
+zombieJanitorRadiated,Radiated Janitor
+
+zombieJoe,Shaggy
+zombieJoeCharged,Charged Shaggy
+zombieJoeFeral,Feral Shaggy
+zombieJoeInfernal,Infernal Shaggy
+zombieJoeRadiated,Radiated Shaggy
+
+zombieLab,Lab Worker
+zombieLabCharged,Charged Lab Worker
+zombieLabFeral,Feral Lab Worker
+zombieLabInfernal,Infernal Lab Worker
+zombieLabRadiated,Radiated Lab Worker
+
+zombieLumberjack,Lumberjack
+zombieLumberjackCharged,Charged Lumberjack
+zombieLumberjackFeral,Feral Lumberjack
+zombieLumberjackInfernal,Infernal Lumberjack
+zombieLumberjackRadiated,Radiated Lumberjack
+
+zombieMaleHazmat,Hazmat
+zombieMaleHazmatCharged,Charged Hazmat
+zombieMaleHazmatFeral,Feral Hazmat
+zombieMaleHazmatInfernal,Infernal Hazmat
+zombieMaleHazmatRadiated,Radiated Hazmat
+
+zombieMarlene,Marlene
+zombieMarleneCharged,Charged Marlene
+zombieMarleneFeral,Feral Marlene
+zombieMarleneInfernal,Infernal Marlene
+zombieMarleneRadiated,Radiated Marlene
+
+zombieMoe,Ray
+zombieMoeCharged,Charged Ray
+zombieMoeFeral,Feral Ray
+zombieMoeInfernal,Infernal Ray
+zombieMoeRadiated,Radiated Ray
+
+zombieMutated,Mutated
+zombieMutatedCharged,Charged Mutated
+zombieMutatedFeral,Feral Mutated
+zombieMutatedInfernal,Infernal Mutated
+zombieMutatedRadiated,Radiated Mutated
+
+zombieNurse,Nurse
+zombieNurseCharged,Charged Nurse
+zombieNurseFeral,Feral Nurse
+zombieNurseInfernal,Infernal Nurse
+zombieNurseRadiated,Radiated Nurse
+
+zombiePartyGirl,Kandi
+zombiePartyGirlCharged,Charged Kandi
+zombiePartyGirlFeral,Feral Kandi
+zombiePartyGirlInfernal,Infernal Kandi
+zombiePartyGirlRadiated,Radiated Kandi
+
+zombiePlagueSpitter,Rancher
+zombiePlagueSpitterCharged,Charged Rancher
+zombiePlagueSpitterFeral,Feral Rancher
+zombiePlagueSpitterInfernal,Infernal Rancher
+zombiePlagueSpitterRadiated,Radiated Rancher
+
+zombieScreamer,Screamer
+zombieScreamerCharged,Charged Screamer
+zombieScreamerFeral,Feral Screamer
+zombieScreamerInfernal,Infernal Screamer
+zombieScreamerRadiated,Radiated Screamer
+
+zombieSkateboarder,Kenny
+zombieSkateboarderCharged,Charged Kenny
+zombieSkateboarderFeral,Feral Kenny
+zombieSkateboarderInfernal,Infernal Kenny
+zombieSkateboarderRadiated,Radiated Kenny
+
+zombieSoldier,Pvt. Ryan
+zombieSoldierCharged,Charged Pvt. Ryan
+zombieSoldierFeral,Feral Pvt. Ryan
+zombieSoldierInfernal,Infernal Pvt. Ryan
+zombieSoldierRadiated,Radiated Pvt. Ryan
+
+zombieSpider,Spider
+zombieSpiderCharged,Charged Spider
+zombieSpiderFeral,Feral Spider
+zombieSpiderInfernal,Infernal Spider
+zombieSpiderRadiated,Radiated Spider
+
+zombieSteve,Steve
+zombieSteveCharged,Charged Steve
+zombieSteveCrawler,Lt. Dan
+zombieSteveCrawlerFeral,Feral Lt. Dan
+zombieSteveCrawlerRadiated,Radiated Lt. Dan
+zombieSteveFeral,Feral Steve
+zombieSteveInfernal,Infernal Steve
+zombieSteveRadiated,Radiated Steve
+
+zombieTomClark,Tom Clark
+zombieTomClarkCharged,Charged Tom Clark
+zombieTomClarkFeral,Feral Tom Clark
+zombieTomClarkInfernal,Infernal Tom Clark
+zombieTomClarkRadiated,Radiated Tom Clark
+
+zombieUtilityWorker,Utility Worker
+zombieUtilityWorkerCharged,Charged Utility Worker
+zombieUtilityWorkerFeral,Feral Utility Worker
+zombieUtilityWorkerInfernal,Infernal Utility Worker
+zombieUtilityWorkerRadiated,Radiated Utility Worker
+
+zombieWight,Wight
+zombieWightCharged,Charged Wight
+zombieWightFeral,Feral Wight
+zombieWightInfernal,Infernal Wight
+zombieWightRadiated,Radiated Wight
+
+zombieYo,Mel Gibson
+zombieYoCharged,Charged Mel Gibson
+zombieYoFeral,Feral Mel Gibson
+zombieYoInfernal,Infernal Mel Gibson
+zombieYoRadiated,Radiated Mel Gibson

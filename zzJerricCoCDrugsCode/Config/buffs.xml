@@ -1,0 +1,255 @@
+<Jerric>
+
+<!-- CoC Drug Buff additions -->
+<append xpath="buffs">
+<!-- J-Roids -->
+<buff name="buffJerric" name_key="buffJerric" description_key="buffJerricDesc" icon="ui_game_symbol_pack_mule">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".BuffJerricDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffJerricDuration" operation="set" value="903"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffJerricDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffJerricDisplay" operation="set" value="@$BuffJerricDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffJerricDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffJerric">
+			<requirement name="CVarCompare" cvar="$BuffJerricDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffJerricDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffJerricDuration" operation="set" value="0"/>
+<!--		<triggered_effect trigger="onSelfBuffRemove" action="ULM_RecalculatePlayerWeight,UndeadLegacy" target="self"/> -->
+	</effect_group>
+	<effect_group>
+		<passive_effect name="CarryCapacity" operation="base_add" value="500"/>
+	</effect_group>
+</buff>
+<!-- S-Nap -->
+<buff name="buffStu" name_key="buffStu" description_key="buffStuDesc" icon="ui_game_symbol_xp">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".BuffStuDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffStuDuration" operation="set" value="903"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffStuDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffStuDisplay" operation="set" value="@$BuffStuDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffStuDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffStu">
+			<requirement name="CVarCompare" cvar="$BuffStuDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffStuDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffStuDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".5"/>
+	</effect_group>
+</buff>
+<!-- T-Pain -->
+<buff name="buffTibs" name_key="buffTibs" description_key="buffTibsDesc" icon="ui_game_symbol_defense">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".BuffTibsDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffTibsDuration" operation="set" value="23"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffTibsDuration" operation="subtract" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffTibsDisplay" operation="set" value="@$BuffTibsDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffTibsDisplay" operation="divide" value="1"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffTibs">
+			<requirement name="CVarCompare" cvar="$BuffTibsDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffTibsDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffTibsDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect name="GeneralDamageResist" operation="base_add" value="1"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveAllNegativeBuffs"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="25000"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$armHurtCounter" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$abrasionHealthMaxBlockage" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$abrasionCounter" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffTibsCooldown">
+			<requirement name="CVarCompare" cvar="$BuffTibsCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+	</effect_group>
+</buff>
+<buff name="buffTibsCooldown" name_key="buffTibsCooldown" description_key="buffTibsCooldownDesc" icon="ui_game_symbol_death">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".buffTibsCooldownDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffTibsCooldownDuration" operation="set" value="3603"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffTibsCooldownDuration" operation="subtract" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffTibsCooldownDisplay" operation="set" value="@$BuffTibsCooldownDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffTibsCooldownDisplay" operation="divide" value="1"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffTibsCooldown">
+			<requirement name="CVarCompare" cvar="$BuffTibsCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffTibsCooldownDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffTibsCooldownDuration" operation="set" value="0"/>
+	</effect_group>
+</buff>
+<!-- F-Bomb -->
+<buff name="buffFelix" name_key="buffFelix" description_key="buffFelixDesc" icon="ui_game_symbol_run">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".BuffFelixDisplay"/>
+	<display_value_format value="time"/>
+<effect_group>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffFelixDuration" operation="set" value="303"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffFelixDuration" operation="subtract" value="@$MetabolismDuration"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffFelixDisplay" operation="set" value="@$BuffFelixDuration"/>
+	<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffFelixDisplay" operation="divide" value="@$MetabolismDuration"/>
+</effect_group>
+<effect_group>
+	<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffFelix">
+		<requirement name="CVarCompare" cvar="$BuffFelixDuration" operation="LTE" value="0"/>
+	</triggered_effect>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffFelixDisplay" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffFelixDuration" operation="set" value="0"/>
+</effect_group>
+	<effect_group>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".5"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".5"/>
+	</effect_group>
+</buff>
+<!-- P-Nice -->
+<buff name="buffPai" name_key="buffPai" description_key="buffPaiDesc" icon="ui_game_symbol_ninja">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".BuffPaiDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffPaiDuration" operation="set" value="903"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffPaiDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffPaiDisplay" operation="set" value="@$BuffPaiDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffPaiDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffPai">
+			<requirement name="CVarCompare" cvar="$BuffPaiDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffPaiDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffPaiDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect name="CrouchSpeed" operation="perc_add" value=".50"/>
+		<passive_effect name="LightMultiplier" operation="perc_add" value="-.75"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add"  value="-.75"/>
+	</effect_group>
+</buff>
+<!-- M-kay -->
+<buff name="buffMaddie" name_key="buffMaddie" description_key="buffMaddieDesc" icon="ui_game_symbol_run_and_gun">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".BuffMaddieDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffMaddieDuration" operation="set" value="903"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffMaddieDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffMaddieDisplay" operation="set" value="@$BuffMaddieDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffMaddieDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffMaddie">
+			<requirement name="CVarCompare" cvar="$BuffMaddieDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffMaddieDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffMaddieDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value=".75"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".75"/>
+	</effect_group>
+</buff>
+<!-- B-eak -->
+<buff name="buffBirb" name_key="buffBirb" description_key="buffBirbDesc" icon="ui_game_symbol_tracking_chicken">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".buffBirbDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBirbDuration" operation="set" value="903"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffBirbDuration" operation="subtract" value="@$MetabolismDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffBirbDisplay" operation="set" value="@$buffBirbDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffBirbDisplay" operation="divide" value="@$MetabolismDuration"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBirb">
+			<requirement name="CVarCompare" cvar="$buffBirbDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffBirbDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffBirbDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<passive_effect name="LootStage" operation="base_add" value="500" />
+	</effect_group>
+</buff>
+<!-- Sewing Kit Buff additions -->
+<buff name="buffSkit" name_key="buffSkit" description_key="buffSkitDesc" icon="ui_game_symbol_fire">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<update_rate value=".7"/>
+	<display_value value=".BuffSkitDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffSkitDuration" operation="set" value="23"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffSkitDuration" operation="subtract" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffSkitDisplay" operation="set" value="@$BuffSkitDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffSkitDisplay" operation="divide" value="1"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffSkit">
+			<requirement name="CVarCompare" cvar="$BuffSkitDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffSkitDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffSkitDuration" operation="set" value="0"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffRingOfFireEffect">
+			<requirement name="!EntityTagCompare" target="other" tags="npc,vehicle,player,turret,drone"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSkitCooldown">
+			<requirement name="CVarCompare" cvar="$BuffSkitCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+	</effect_group>
+</buff>
+<buff name="buffSkitCooldown" name_key="buffSkitCooldown" description_key="buffSkitCooldownDesc" icon="ui_game_symbol_death">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<display_value value=".buffSkitCooldownDisplay"/>
+	<display_value_format value="time"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$BuffSkitCooldownDuration" operation="set" value="1203"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$BuffSkitCooldownDuration" operation="subtract" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffSkitCooldownDisplay" operation="set" value="@$BuffSkitCooldownDuration"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BuffSkitCooldownDisplay" operation="divide" value="1"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BuffSkitCooldown">
+			<requirement name="CVarCompare" cvar="$BuffSkitCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BuffSkitCooldownDisplay" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$BuffSkitCooldownDuration" operation="set" value="0"/>
+	</effect_group>
+</buff>
+</append>
+
+</Jerric>

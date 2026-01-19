@@ -1,0 +1,49 @@
+<Jerric>
+
+<!-- CoC Drug Displays -->
+<append xpath="/ui_display_info/item_display">
+<!-- JRoids -->
+<item_display_info display_type="drugJroids" display_group="groupConsumables">
+	<display_entry name="dCarryCapacity"                                title_key="statCarryCapacity"			display_leading_plus="true"/>
+	<display_entry name="dDuration"                                     title_key="statDuration"				display_type="Time"/>
+</item_display_info>
+<!-- SNaps -->
+<item_display_info display_type="drugSnap" display_group="groupConsumables">
+	<display_entry name="dPlayerExpGain"								title_key="statShowPlayerExpGain" 		display_type="Percent"		display_leading_plus="true"/>
+	<display_entry name="dDuration"					               		title_key="statDuration" 				display_type="Time"/>
+</item_display_info>
+<!-- TPains -->
+<item_display_info display_type="drugTpain" display_group="groupConsumables">
+	<display_entry name="dInvuln"                                       title_key="statJTInvuln"				display_type="Time"/>
+</item_display_info>
+<!-- FBombs -->
+<item_display_info display_type="drugFbomb" display_group="groupConsumables">
+	<display_entry name="dWalkSpeed"                                    title_key="statWalkSpeed"				display_type="Percent"		display_leading_plus="true"/>
+	<display_entry name="dRunSpeed"                                     title_key="statRunSpeed"				display_type="Percent"		display_leading_plus="true"/>
+	<display_entry name="dDuration"                                     title_key="statDuration"				display_type="Time"/>
+</item_display_info>
+<!-- PNice -->
+<item_display_info display_type="drugPnice" display_group="groupConsumables">
+	<display_entry name="dCrouchSpeed" 									title_key="statJTCrouchSpeed"			display_type="Percent"		display_leading_plus="true"/>
+	<display_entry name="dLightMultiplier" 								title_key="statJTAppearence"			display_type="Percent"		negative_preferred="true"/>
+	<display_entry name="dNoiseMultiplier"								title_key="statJTStealth"				display_type="Percent"/>
+	<display_entry name="dDuration"                                     title_key="statDuration"				display_type="Time"/>
+</item_display_info>
+<!-- MKay -->
+<item_display_info display_type="drugMkay" display_group="groupConsumables">
+	<display_entry name="dRoundsPerMinute" 								title_key="statJTAttackSpeed"			display_type="Percent"		display_leading_plus="true"/>
+	<display_entry name="dReloadSpeedMultiplier" 						title_key="statJTReloadSpeed"			display_type="Percent"		display_leading_plus="true"/>
+	<display_entry name="dDuration"                                     title_key="statDuration"				display_type="Time"/>
+</item_display_info>
+<!-- BEaks -->
+<item_display_info display_type="drugBeaks" display_group="groupConsumables">
+	<display_entry name="dLootStageFlat"							    title_key="dLootStageFlat"			    display_leading_plus="true" />
+	<display_entry name="dDuration"                                     title_key="statDuration"				display_type="Time"/>
+</item_display_info>
+<!-- Skit -->
+<item_display_info display_type="drugSkit" display_group="groupConsumables">
+	<display_entry name="dRoF"                                          title_key="statJTFire"					display_type="Time"/>
+</item_display_info>
+</append>
+
+</Jerric>

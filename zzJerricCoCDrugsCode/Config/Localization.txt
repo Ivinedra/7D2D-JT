@@ -1,0 +1,55 @@
+﻿Key,English
+
+statWalkSpeed,"Walk Speed"
+statJTCrouchSpeed,"Crouch Speed"
+statJTAppearence,"Visibility"
+statJTStealth,"Noise Reduction"
+statJTAttackSpeed,"Attack Speed"
+statJTReloadSpeed,"Reload Speed"
+statJTInvuln,"Invulnerability"
+statJTFire,"Ring of Fire AOE"
+
+drugJroids,"J-Roids!"
+drugJroidsDesc,"''I was searching all the trash piles....\n\nand I found all this Rotten Flesh that your dropped.''\n\n                   -Jerric"
+buffJerric,"J-Roids!"
+buffJerricDesc,"Your physical ability to carry more has been increased by [decea3]500[-].\nStacks with [decea3]Steroids[-] effect."
+
+drugSnaps,"S-Naps"
+drugSnapDesc,"''Grunt.''\n\n                   -Stu"
+buffStu,"S-Naps"
+buffStuDesc,"Your experience gain has been increased by [decea3]50%[-].\nStacks with [decea3]Grandpa's Learn'n Elixir[-] effect."
+
+drugTpain,"T-Pains"
+drugTpainDesc,"''I'm stuck...\nThey are going to get me.''\n\n                   -Tibs\n\n\n[545454]Tibrael has died.[-]                                    "
+buffTibs,"T-Pains"
+buffTibsDesc,"Hallowed Ground. [decea3]20[-] seconds of sweet, sweet, godmode."
+buffTibsCooldown,"Brush of Death"
+buffTibsCooldownDesc,"Trust your healers, you are not allowed to Hallowed Ground at the moment."
+
+drugFbomb,"F-Bombs"
+drugFbombDesc,"''It is 2000. Dip. Dip. M***** F****** Potato Chip.''\n\n''Run. Run. Run. Running over here. Run. Run. Running. Run.''\n\n                   -Felix"
+buffFelix,"F-Bombs"
+buffFelixDesc,"A burst of energy. Run [decea3]50%[-] faster."
+
+drugPnice,"P-Nices"
+drugPniceDesc,"''You go on ahead. I'm going to sneak around up here and pick them b****** off.''\n\n                   -Pai"
+buffPai,"P-Nices"
+buffPaiDesc,"You sneaky snake. Crouch Speed is [decea3]50%[-] faster. [decea3]75%[-] less visible. [decea3]75%[-] quieter."
+
+drugMkay,"M-Kays"
+drugMkayDesc,"''Can we go on an adventure?''\n\n                   -Maddy"
+buffMaddie,"M-Kays"
+buffMaddieDesc,"Murder Mittens. Attack Speed is [decea3]75%[-] faster. Reload speed is [decea3]75%[-] faster."
+
+drugBeaks,"B-Eaks"
+drugBeaksDesc,"''BABBIES!!!!''\n\n                   -Birb"
+buffBirb,"B-Eaks"
+buffBirbDesc,"Oh, look. A chair! Yoink. Loot stage increased by [decea3]500[-]."
+dLootStageFlat, "Loot Stage"
+
+drugSkit,"Sewing Kit?"
+drugSkitDesc,"Looks like grandma's.... but her's didn't do this!"
+buffSkit,"''Sewing Kit?''"
+buffSkitDesc,"I fell into a burning ring of fire....."
+buffSkitCooldown,"Wet, Wet, Wet!"
+buffSkitCooldownDesc,"You may not feel it, but your body feels wet and you can't fall into a burning ring of fire... oddly enough you can still get lit on fire... such a weird state."

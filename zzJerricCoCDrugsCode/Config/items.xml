@@ -1,0 +1,171 @@
+<Jerric>
+
+<!-- CoC Drug Buff additions -->
+<append xpath="/items">
+<!-- J-Roids -->
+<item name="drugJroids">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTGreenInject"/>
+	<property name="DisplayType" value="drugJroids"/>
+	<property name="DescriptionKey" value="drugJroidsDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dCarryCapacity" value="500"/>
+		<display_value name="dDuration" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffJerricDuration" operation="add" value="903"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffJerricDuration" operation="set" value="1803">
+			<requirement name="CVarCompare" cvar="$BuffJerricDuration" operation="GT" value="1803"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffJerric"/>
+	</effect_group>
+</item>
+<!-- S-Naps -->
+<item name="drugSnaps">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTBluePill"/>
+	<property name="DisplayType" value="drugSnap"/>
+	<property name="DescriptionKey" value="drugSnapDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dPlayerExpGain" value=".5"/>
+		<display_value name="dDuration" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffStuDuration" operation="add" value="903"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffStuDuration" operation="set" value="1803">
+			<requirement name="CVarCompare" cvar="$BuffStuDuration" operation="GT" value="1803"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffStu"/>
+	</effect_group>
+</item>
+<!-- T-Pains -->
+<item name="drugTpain">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTPurplePill"/>
+	<property name="DisplayType" value="drugTpain"/>
+	<property name="DescriptionKey" value="drugTpainDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dInvuln" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffTibsDuration" operation="set" value="23">
+			<requirement name="CVarCompare" cvar="$BuffTibsCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffTibs">
+			<requirement name="CVarCompare" cvar="$BuffTibsCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+<!-- F-Bombs -->
+<item name="drugFbomb">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTGreenTablet"/>
+	<property name="DisplayType" value="drugFbomb"/>
+	<property name="DescriptionKey" value="drugFbombDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dWalkSpeed" value=".5"/>
+		<display_value name="dRunSpeed" value=".5"/>
+		<display_value name="dDuration" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffFelixDuration" operation="add" value="303"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffFelixDuration" operation="set" value="603">
+			<requirement name="CVarCompare" cvar="$BuffFelixDuration" operation="GT" value="603"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFelix"/>
+	</effect_group>
+</item>
+<!-- P-Nice -->
+<item name="drugPnice">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTTealTablet"/>
+	<property name="DisplayType" value="drugPnice"/>
+	<property name="DescriptionKey" value="drugPniceDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dCrouchSpeed" value=".5"/>
+		<display_value name="dLightMultiplier" value="-.75"/>
+		<display_value name="dNoiseMultiplier" value=".75"/>
+		<display_value name="dDuration" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffPaiDuration" operation="add" value="903"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffPaiDuration" operation="set" value="1803">
+			<requirement name="CVarCompare" cvar="$BuffPaiDuration" operation="GT" value="1803"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPai"/>
+	</effect_group>
+</item>
+<!-- M-kay -->
+<item name="drugMkay">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTPinkTablet"/>
+	<property name="DisplayType" value="drugMkay"/>
+	<property name="DescriptionKey" value="drugMkayDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dRoundsPerMinute" value=".75"/>
+		<display_value name="dReloadSpeedMultiplier" value=".75"/>
+		<display_value name="dDuration" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffMaddieDuration" operation="add" value="903"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffMaddieDuration" operation="set" value="1803">
+			<requirement name="CVarCompare" cvar="$BuffMaddieDuration" operation="GT" value="1803"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaddie"/>
+	</effect_group>
+</item>
+<!-- B-eaks -->
+<item name="drugBeaks">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTBlueTablet"/>
+	<property name="DisplayType" value="drugBeaks"/>
+	<property name="DescriptionKey" value="drugBeaksDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dLootStageFlat" value="500"/>
+		<display_value name="dDuration" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffBirbDuration" operation="add" value="903"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffBirbDuration" operation="set" value="1803">
+			<requirement name="CVarCompare" cvar="$BuffBirbDuration" operation="GT" value="1803"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBirb"/>
+	</effect_group>
+</item>
+<!-- "Sewing Kit" addition -->
+<item name="drugSkit">
+	<property name="Extends" value="drugPainkillers"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="resourceCandyTin"/>
+	<property name="DisplayType" value="drugSkit"/>
+	<property name="DescriptionKey" value="drugSkitDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group tiered="false">
+		<display_value name="dRoF" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$BuffSkitDuration" operation="set" value="23">
+			<requirement name="CVarCompare" cvar="$BuffSkitCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSkit">
+			<requirement name="CVarCompare" cvar="$BuffSkitCooldownDuration" operation="LTE" value="0"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+</append>
+
+</Jerric>

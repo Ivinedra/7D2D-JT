@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="CoC_Drugs"/>
+	<DisplayName value="COC Drugs" />
+	<Description value="CoC Drugs" />
+	<Author value="Jerric"/>
+	<Version value="1.0.3"/>
+	<Website value=""/>
+	<SkipWithAntiCheat value="True" />
+</xml>
