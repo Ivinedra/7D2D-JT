@@ -82,11 +82,11 @@ zombieInmateFeral,Feral Inmate
 zombieInmateInfernal,Infernal Inmate
 zombieInmateRadiated,Radiated Inmate
 
-zombieJanitor,Janitor
-zombieJanitorCharged,Charged Janitor
-zombieJanitorFeral,Feral Janitor
-zombieJanitorInfernal,Infernal Janitor
-zombieJanitorRadiated,Radiated Janitor
+zombieJanitor,Willy
+zombieJanitorCharged,Charged Willy
+zombieJanitorFeral,Feral Willy
+zombieJanitorInfernal,Infernal Willy
+zombieJanitorRadiated,Radiated Willy
 
 zombieJoe,Shaggy
 zombieJoeCharged,Charged Shaggy

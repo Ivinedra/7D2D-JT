@@ -416,3 +416,9 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+zzJerricCoCDrugs/UIAtlases/ItemIconAtlas/ulmResourceDyeBlack.png
+zzJerricCoCDrugs/UIAtlases/ItemIconAtlas/ulmResourceDyeBlue.png
+zzJerricCoCDrugs/UIAtlases/ItemIconAtlas/ulmResourceDyeRed.png
+zzJerricCoCDrugs/UIAtlases/ItemIconAtlas/ulmResourceDyeTeal.png
+zzJerricCoCDrugs/UIAtlases/ItemIconAtlas/ulmResourceDyeWhite.png
+zzJerricCoCDrugs/UIAtlases/ItemIconAtlas/ulmResourceDyeYellow.png

@@ -44,6 +44,8 @@
 <item_display_info display_type="drugSkit" display_group="groupConsumables">
 	<display_entry name="dRoF"                                          title_key="statJTFire"					display_type="Time"/>
 </item_display_info>
+<!-- mend-x-sin -->
+<item_display_info display_type="drugMendXSin" display_group="groupConsumables">
+</item_display_info>
 </append>
-
 </Jerric>

@@ -10,6 +10,7 @@
 	<item name="drugMkay" loot_prob_template="veryLow" />
 	<item name="drugSkit" loot_prob_template="veryLow" />
 	<item name="drugBeaks" loot_prob_template="veryLow" />
+	<item name="drugMendXSin" loot_prob_template="veryLow" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon'or @name='airdropMedicine' or @name='airdropMedicine']" >
@@ -21,6 +22,7 @@
 	<item name="drugMkay" count="1,2" prob="0.1" />
 	<item name="drugSkit" count="1,2" prob="0.1" />
 	<item name="drugBeaks" count="1,2" prob="0.1" />
+	<item name="drugMendXSin" count="1,2" prob="0.1" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupMedicalRare'or @name='airdropMedicine' or @name='airdropMedicine']" >
@@ -32,6 +34,7 @@
 	<item name="drugMkay" count="1,2" prob="0.15" />
 	<item name="drugSkit" count="1,2" prob="0.15" />
 	<item name="drugBeaks" count="1,2" prob="0.15" />
+	<item name="drugMendXSin" count="1,2" prob="0.15" />
 </append>
 
 </Jerric>

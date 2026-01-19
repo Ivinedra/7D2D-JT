@@ -4,7 +4,7 @@
 <append xpath="/items">
 <!-- J-Roids -->
 <item name="drugJroids">
-	<property name="Extends" value="drugPainkillers"/>
+	<property name="Extends" value="drugSteroids"/>
 	<property name="Group" value="Medical,Consumables,Items"/>
 	<property name="CustomIcon" value="JTGreenInject"/>
 	<property name="DisplayType" value="drugJroids"/>
@@ -164,6 +164,23 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSkit">
 			<requirement name="CVarCompare" cvar="$BuffSkitCooldownDuration" operation="LTE" value="0"/>
 		</triggered_effect>
+	</effect_group>
+</item>
+<!-- mend-x-sin addition -->
+<item name="drugMendXSin">
+	<property name="Extends" value="drugSteroids"/>
+	<property name="Group" value="Medical,Consumables,Items"/>
+	<property name="CustomIcon" value="JTRedInject"/>
+	<property name="DisplayType" value="drugMendXSin"/>
+	<property name="DescriptionKey" value="drugMendXSinDesc"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Stacknumber" value="100"/>
+	<property name="CarryWeight" value="0.05"/>
+	<effect_group name="Primary Action" tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="20" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="100" />
+		<display_value name="foodHealthAmount" value="20" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
 	</effect_group>
 </item>
 </append>

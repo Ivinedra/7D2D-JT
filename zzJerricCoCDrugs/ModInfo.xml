@@ -4,7 +4,7 @@
 	<DisplayName value="COC Drugs" />
 	<Description value="CoC Drugs" />
 	<Author value="Jerric"/>
-	<Version value="1.0.3"/>
+	<Version value="1.1.0"/>
 	<Website value=""/>
 	<SkipWithAntiCheat value="True" />
 </xml>

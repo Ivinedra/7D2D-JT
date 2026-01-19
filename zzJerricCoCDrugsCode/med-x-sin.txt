@@ -1,7 +1,0 @@
-Name:			med-x-sin
-Item color:		red
-Health Effect:		health regen
-Buffs:			<requirement name="!HasBuff" buff="buffDrugSteroids"/>
-			<requirement name="HasBuff" buff="buffDrugSteroids"/>
-
-
